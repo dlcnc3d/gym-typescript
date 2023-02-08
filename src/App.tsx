@@ -1,16 +1,12 @@
 import { useState } from "react";
 import Navbar from "@/scenes/navbar"
+import { SelectedPage } from "./shared/types";
 
-enum SelectedPage {
-  Home = "home",
-  Benefits="Benefits",
-  OurClasses="Our classes",
-  ContactUs="Contact Us"
-}
+
 
 function App() {
 
-  const [selectedPage, setSelectedPage] = useState("home");
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
   return <div className="app bg-gray-20">    
     <Navbar
     selectedPage={selectedPage}
