@@ -9,7 +9,8 @@ type Props = {
 };
 
 const Link = (props: Props) => {
-  const lowerCasePage = props.page.toLowerCase().replace(/ /g, "") as SelectedPage;
+  const lowerCasePage = props.page.toLowerCase().replace(/ /g, "") as SelectedPage;  
+  console.log("lowerCasePage", lowerCasePage)
 
   return (
     <AnchorLink
